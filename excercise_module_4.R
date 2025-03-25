@@ -14,14 +14,13 @@ library(haven)
 
 # Define the root directory path
 current_dir <- getwd()
-print(current_dir)
 
 # Data must be downloaded from https://www.openicpsr.org/openicpsr/project/112832/version/V1/view
-data_file <- "panel_biomarkers.dta"
+data_file <- "data/panel_biomarkers.dta"
 
 # Load data
 full_path <- file.path(current_dir, data_file)
-panel_biomarkers <- read_dta(full_path, "/data/panel_biomarkers.dta")
+panel_biomarkers <- read_dta(full_path)
 
 
 ## Summary statistics, confidence intervals and t-tests
